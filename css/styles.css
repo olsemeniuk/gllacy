@@ -46,11 +46,12 @@
   --light: #e7e7e7;
   --extra-light: #fcfcfc;
   --white: #ffffff;
-  --accent-extra-bright: #ff2f64;
-  --accent-bright: #ff4a78;
-  --accent-neutral: #ff7799;
-  --accent-light: #feafc3;
-  --accent-extra-light: #ffcbd8;
+  --black: #000000;
+  --special-extra-bright: #ff2f64;
+  --special-bright: #ff4a78;
+  --special-neutral: #ff7799;
+  --special-light: #feafc3;
+  --special-extra-light: #ffcbd8;
   --blue: #69a9ff;
   --yellow: #fcc850;
   --status-error: #ea5454;
@@ -84,10 +85,22 @@ body {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-height: 100%;
-  font: ;
-  color: ;
-  background-color: ;
+  font: 400 16px/22px var(--font-primary);
+  color: var(--dark);
+  background-color: var(--special-light);
   overflow-x: hidden;
+}
+
+.pink-bg {
+  background-color: var(--special-light);
+}
+
+.blue-bg {
+  background-color: var(--blue);
+}
+
+.yellow-bg {
+  background-color: var(--yellow);
 }
 
 img {
@@ -125,15 +138,155 @@ textarea {
 }
 
 .container {
-  max-width: ;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: ;
+  padding: 0 15px;
 }
 
 
 /*====================
     REPEATING ELEMENTS
   ====================*/
+.title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: var(--extra-dark);
+}
+
+.small-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--extra-dark);
+}
+
+/* button */
+.button {
+  display: inline-block;
+  margin: 4px;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 26px;
+  box-shadow: var(--small-shadow);
+  cursor: pointer;
+}
+
+.button:active {
+  opacity: 0.3;
+}
+
+.button--white {
+  color: var(--extra-dark);
+  background-color: var(--extra-light);
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+}
+
+.button--white:focus {
+  background-color: var(--extra-light);
+  box-shadow: var(--small-shadow);
+  outline: 2px solid var(--extra-dark);
+}
+
+.button--white:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0px 4px 15px rgba(133, 133, 133, 0.15);
+  outline: 4px solid var(--extra-light);
+}
+
+.button--white:disabled {
+  font-weight: 400;
+  color: var(--neutral);
+  background-color: var(--light);
+  box-shadow: none;
+  opacity: 1;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+}
+
+.button--accent {
+  color: var(--extra-light);
+  background-color: var(--special-extra-bright);
+  outline: 4px solid rgba(255, 47, 100, 0.3);
+}
+
+.button--accent:focus {
+  color: var(--extra-light);
+  background-color: var(--special-extra-bright);
+  box-shadow: var(--small-shadow);
+  outline: 2px solid var(--extra-dark);
+}
+
+.button--accent:hover {
+  color: var(--extra-dark);
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: none;
+  outline: 4px solid var(--special-extra-bright);
+}
+
+.button--accent:disabled {
+  font-weight: 400;
+  color: var(--dark);
+  background-color: var(--neutral);
+  box-shadow: none;
+  opacity: 1;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+}
+
+/* form field */
+.form-field {
+  width: 100%;
+  padding: 13px 16px;
+  line-height: 20px;
+  color: var(--extra-dark);
+  background-color: var(--white);
+  border: 1px solid var(--neutral);
+  border-radius: 4px;
+}
+
+.form-field::placeholder {
+  color: var(--neutral);
+}
+
+input.form-field {
+  height: 48px;
+}
+
+textarea.form-field {
+  height: 150px;
+}
+
+.form-field:hover {
+  border-color: var(--extra-dark);
+}
+
+.form-field:focus {
+  outline: 2px solid var(--extra-dark);
+  outline-offset: -2px;
+}
+
+.form-field--error {
+  border-color: var(--status-error);
+}
+
+.form-field--error:focus,
+.form-field--error:hover {
+  outline: 2px solid var(--status-error);
+  outline-offset: -2px;
+}
+
+.form-field:disabled {
+  background-color: var(--light);
+  border-color: var(--neutral);
+  outline: none;
+}
 
 
 /*====================
