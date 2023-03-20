@@ -38,6 +38,29 @@
 :root {
   /* fonts */
   --font-primary: "Inter", sans-serif;
+
+  /* colors */
+  --extra-dark: #2d3440;
+  --dark: #565c66;
+  --neutral: #b9b9b9;
+  --light: #e7e7e7;
+  --extra-light: #fcfcfc;
+  --white: #ffffff;
+  --accent-extra-bright: #ff2f64;
+  --accent-bright: #ff4a78;
+  --accent-neutral: #ff7799;
+  --accent-light: #feafc3;
+  --accent-extra-light: #ffcbd8;
+  --blue: #69a9ff;
+  --yellow: #fcc850;
+  --status-error: #ea5454;
+  --status-warning: #fd912e;
+  --status-success: #00e484;
+
+  /* shadows */
+  --small-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  --normal-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  --big-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
 }
 
 
