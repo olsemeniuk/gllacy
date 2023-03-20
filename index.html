@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description"
+    content="Магазин Глейси – онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес">
   <title>Gllacy Shop</title>
 
   <!-- favicon -->
@@ -13,23 +15,141 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="accent_color">
+  <meta name="theme-color" content="#ff7799">
   <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="accent_color">
+  <meta name="msapplication-navbutton-color" content="#ff7799">
   <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="accent_color">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ff7799">
 
   <!-- styles and css libs -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-  <header class="header"></header>
+  <header class="header">
+    <h1 class="visually-hidden">Магазин Глейси</h1>
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo">
+          <img class="logo__link" width="137" height="56" src="images/logo.svg" alt="Логотип Gllacy Shop.">
+        </a>
+        <nav class="nav">
+          <h2 class="visually-hidden">Навигация по сайту</h2>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="nav__link nav__link-dropdown" type="button" aria-haspopup="true">Каталог</button>
+              <section class="dropdown">
+                <h3 class="dropdown__title">Новинки</h3>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Сливочное</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Щербеты</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </section>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О компании</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="header__tel" href="tel:+78005558628">+7 800 555-86-28</a>
+          </li>
+          <li class="user-nav__item">
+            <button class="open-search" type="button" aria-label="Открыть форму поиска"></button>
+            <form class="search-popup" action="#" method="get">
+              <label class="visually-hidden" for="search-popup-input">Введите текст для поиска</label>
+              <input class="search-popup__input form-field" id="search-popup-input" type="search" name="search"
+                placeholder="Поиск по сайту" required>
+              <button class="visually-hidden" type="submit">Искать</button>
+            </form>
+          </li>
+          <li class="user-nav__item">
+            <button class="user-nav__button" type="button">Вход</button>
+            <section class="popup login-popup">
+              <h2 class="popup__title small-title">
+                Личный кабинет
+              </h2>
+              <form class="login-form" action="#" method="post">
+                <label class="visually-hidden" for="login-email-input">Введите свой email</label>
+                <input class="login-form__input form-field" id="login-email-input" type="email" name="login-email"
+                  placeholder="email@example.com" required>
+                <label class="visually-hidden" for="login-password-input">Введите свой пароль</label>
+                <input class="login-form__input form-field" id="login-password-input" type="password"
+                  name="login-password" placeholder=" " required>
+                <div class="login-form__row">
+                  <button class="login-form__button button button--accent" type="submit">Войти</button>
+                  <p class="login-form__links">
+                    <a class="login-form__link" href="#">Забыли пароль?</a>
+                    <a class="login-form__link" href="#">Регистрация</a>
+                  </p>
+                </div>
+              </form>
+            </section>
+          </li>
+          <li class="user-nav__item">
+            <button class="user-nav__button" type="button">Пусто</button>
+            <section class="popup cart-popup">
+              <h2 class="popup__title small-title">
+                Корзина
+              </h2>
+              <ul class="cart-popup__list">
+                <li class="cart-popup__item item-cart">
+                  <a class="item-cart__link" href="#">
+                    <img class="item-cart__img" width="46" height="46" src="images/catalog/raspberry.jpg"
+                      alt="Розовый шарик мороженного со вкусом малины.">
+                    <div class="item-cart__info">
+                      <h3 class="item-cart__title">Малинка</h3>
+                      <span class="item-cart__details">1 кг х 310 ₽</span>
+                    </div>
+                  </a>
+                  <b class="item-cart__price">310 ₽</b>
+                  <button class="item-cart__delete" type="button" aria-label="Удалить товар из корзины"></button>
+                </li>
+                <li class="cart-popup__item item-cart">
+                  <a class="item-cart__link" href="#">
+                    <img class="item-cart__img" width="46" height="46" src="images/catalog/bubble-gum.jpg"
+                      alt="Светло-синий шарик мороженного со вкусом Bubble gum с разноцветной кондитерской посыпкой.">
+                    <div class="item-cart__info">
+                      <h3 class="item-cart__title">Бабл-гам</h3>
+                      <span class="item-cart__details">1,5 кг х 320 ₽</span>
+                    </div>
+                  </a>
+                  <b class="item-cart__price">480 ₽</b>
+                  <button class="item-cart__delete" type="button" aria-label="Удалить товар из корзины"></button>
+                </li>
+              </ul>
+              <div class="cart-popup__row">
+                <a class="cart-popup__button button button--accent" href="#">Оформить заказ</a>
+                <strong class="cart-popup__final-price">Итого: 790 ₽</strong>
+              </div>
+              <p class="cart-popup__empty-text">Ваша корзина пока пуста</p>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
   <main class="main"></main>
   <footer class="footer"></footer>
 
   <!-- scripts and js libs -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
