@@ -1,56 +1,65 @@
 const searchPopup = document.querySelector('.search-popup'),
   searchInput = searchPopup.querySelector('.search-popup__input'),
   searchResetBtn = searchPopup.querySelector('.search-popup__reset-button'),
-  openSearchBtn = document.querySelector('.open-search'),
+  openSearchPopup = document.querySelector('.open-search'),
   passwordInputWrapper = document.querySelector('.login-form__password-block'),
   loginPasswordInput = document.getElementById('login-password-input'),
   loginEmailInput = document.getElementById('login-email-input'),
-  openLoginButton = document.querySelector('.user-nav__button-login'),
-  loginPopup = document.querySelector('.login-popup');
+  openLoginPopup = document.querySelector('.user-nav__button-login'),
+  loginPopup = document.querySelector('.login-popup'),
+  cartPopup = document.querySelector('.cart-popup'),
+  openCartPopup = document.querySelector('.cart-button');
 
 // function that openes popup
 const openPopup = (popupOpener, popup, focusedElement) => {
   if (!popupOpener.classList.contains('user-nav__button--active')) {
     popupOpener.classList.add('user-nav__button--active');
     popup.classList.add('popup--active');
-    focusedElement.focus();
+    if (focusedElement) {
+      focusedElement.focus();
+    };
+  } else {
+    popupOpener.classList.remove('user-nav__button--active');
+    popup.classList.remove('popup--active');
+    if (focusedElement) {
+      focusedElement.blur();
+    };
   };
 };
 
 // function that closes popup
-const closePopup = (popupOpener, popup, focusedElement) => {
-  if (popupOpener.classList.contains('user-nav__button--active')) {
-    popupOpener.classList.remove('user-nav__button--active');
-    popup.classList.remove('popup--active');
-    focusedElement.blur();
-    popupOpener.classList.remove('user-nav__button--active');
+const closePopup = (popupOpener, popup, popupSelector, focusedElement) => {
+  const closePopupInnerFunction = (popupOpener, popup, focusedElement) => {
+    if (popupOpener.classList.contains('user-nav__button--active')) {
+      popupOpener.classList.remove('user-nav__button--active');
+      popup.classList.remove('popup--active');
+      popupOpener.classList.remove('user-nav__button--active');
+      if (focusedElement) {
+        focusedElement.blur();
+      };
+    };
   };
-};
-
-// function that closes popup after click anywhere outlide popup or opening button
-const closePopupByClick = (popupOpener, popup, popupSelector, focusedElement) => {
   document.addEventListener('mousedown', e => {
     if (e.target.closest(popupSelector) === null && e.target !== popupOpener) {
-      closePopup(popupOpener, popup, focusedElement);
+      closePopupInnerFunction(popupOpener, popup, focusedElement);
+    };
+  });
+  window.addEventListener('keydown', e => {
+    if (e.code === 'Escape') {
+      closePopupInnerFunction(popupOpener, popup, focusedElement);
     };
   });
 };
 
 // popups open
-openSearchBtn.addEventListener('click', () => openPopup(openSearchBtn, searchPopup, searchInput));
-openLoginButton.addEventListener('click', () => openPopup(openLoginButton, loginPopup, loginEmailInput));
+openSearchPopup.addEventListener('click', () => openPopup(openSearchPopup, searchPopup, searchInput));
+openLoginPopup.addEventListener('click', () => openPopup(openLoginPopup, loginPopup, loginEmailInput));
+openCartPopup.addEventListener('click', () => openPopup(openCartPopup, cartPopup));
 
-// popups close on escape key
-window.addEventListener('keydown', e => {
-  if (e.code === 'Escape') {
-    closePopup(openSearchBtn, searchPopup, searchInput);
-    closePopup(openLoginButton, loginPopup, loginEmailInput);
-  };
-});
-
-// popups close on clicking anywhere outlide popup or opening button
-closePopupByClick(openSearchBtn, searchPopup, '.search-popup', searchInput);
-closePopupByClick(openLoginButton, loginPopup, '.login-popup', loginEmailInput);
+// popups close
+closePopup(openSearchPopup, searchPopup, '.search-popup', searchInput);
+closePopup(openLoginPopup, loginPopup, '.login-popup', loginEmailInput);
+closePopup(openCartPopup, cartPopup, '.cart-popup');
 
 // reset button settings in search field in header search-popup
 searchResetBtn.addEventListener('click', () => {
