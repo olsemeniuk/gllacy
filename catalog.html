@@ -32,14 +32,14 @@
     <h1 class="visually-hidden">Магазин Глейси</h1>
     <div class="container">
       <div class="header__inner">
-        <a class="logo">
-          <img class="logo__link" width="137" height="56" src="images/logo.svg" alt="Логотип Gllacy Shop.">
+        <a class="logo" href="index.html">
+          <img class="logo__img" width="137" height="56" src="images/logo.svg" alt="Логотип Gllacy Shop.">
         </a>
         <nav class="nav">
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="nav__list">
             <li class="nav__item">
-              <button class="nav__link nav__link--active nav__link-dropdown" type="button">Каталог</button>
+              <a class="nav__link nav__link--active nav__link-dropdown nav-link">Каталог</a>
               <section class="dropdown">
                 <h3 class="dropdown__title">Новинки</h3>
                 <ul class="dropdown__list">
@@ -59,10 +59,10 @@
               </section>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Доставка и оплата</a>
+              <a class="nav__link nav-link" href="#">Доставка и оплата</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">О компании</a>
+              <a class="nav__link nav-link" href="#">О компании</a>
             </li>
           </ul>
         </nav>
@@ -70,28 +70,35 @@
           <li class="user-nav__item">
             <a class="header__tel" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="user-nav__item">
+          <li class="user-nav__item search-item">
             <button class="open-search" type="button" aria-label="Открыть форму поиска"></button>
             <form class="search-popup" action="#" method="get">
-              <label class="visually-hidden" for="search-popup-input">Введите текст для поиска</label>
-              <input class="search-popup__input form-field" id="search-popup-input" type="search" name="search"
-                placeholder="Поиск по сайту" required>
-              <button class="visually-hidden" type="submit">Искать</button>
+              <p class="search-popup__input-wrapper">
+                <label class="visually-hidden" for="search-popup-input">Введите текст для поиска</label>
+                <input class="search-popup__input form-field" id="search-popup-input" type="search" name="search"
+                  placeholder="Поиск по сайту" required>
+                <button class="search-popup__reset-button" type="reset" aria-label="Очистить поле поиска."></button>
+              </p>
+              <button class="visually-hidden" type="submit" tabindex="-1">Искать</button>
             </form>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__button" type="button">Вход</button>
+            <button class="user-nav__button user-nav__button-login nav-link" type="button">Вход</button>
             <section class="popup login-popup">
               <h2 class="popup__title small-title">
                 Личный кабинет
               </h2>
               <form class="login-form" action="#" method="post">
-                <label class="visually-hidden" for="login-email-input">Введите свой email</label>
-                <input class="login-form__input form-field" id="login-email-input" type="email" name="login-email"
-                  placeholder="email@example.com" required>
-                <label class="visually-hidden" for="login-password-input">Введите свой пароль</label>
-                <input class="login-form__input form-field" id="login-password-input" type="password"
-                  name="login-password" placeholder=" " required>
+                <p class="login-form__block">
+                  <label class="visually-hidden" for="login-email-input">Введите свой email</label>
+                  <input class="login-form__input form-field" id="login-email-input" type="email" name="login-email"
+                    placeholder="email@example.com" required>
+                </p>
+                <p class="login-form__block login-form__password-block login-form__password-block--active">
+                  <label class="visually-hidden" for="login-password-input">Введите свой пароль</label>
+                  <input class="login-form__input form-field" id="login-password-input" type="password"
+                    name="login-password" required>
+                </p>
                 <div class="login-form__row">
                   <button class="login-form__button button button--accent" type="submit">Войти</button>
                   <p class="login-form__links">
@@ -103,7 +110,7 @@
             </section>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__button cart-button" type="button"
+            <button class="user-nav__button cart-button cart-button--filled nav-link" type="button"
               aria-label="Открыть корзину: сейчас в корзине 2 товара.">2 товара</button>
             <section class="popup cart-popup">
               <h2 class="popup__title small-title">
