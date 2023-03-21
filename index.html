@@ -39,7 +39,7 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="nav__list">
             <li class="nav__item">
-              <button class="nav__link nav__link-dropdown" type="button" aria-haspopup="true">Каталог</button>
+              <button class="nav__link nav__link-dropdown" type="button">Каталог</button>
               <section class="dropdown">
                 <h3 class="dropdown__title">Новинки</h3>
                 <ul class="dropdown__list">
@@ -103,44 +103,12 @@
             </section>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__button" type="button"
+            <button class="user-nav__button cart-button" type="button"
               aria-label="Открыть корзину: сейчас в корзине пусто.">Пусто</button>
             <section class="popup cart-popup">
-              <h2 class="popup__title small-title">
+              <h2 class="visually-hidden">
                 Корзина
               </h2>
-              <ul class="cart-popup__list">
-                <li class="cart-popup__item item-cart">
-                  <a class="item-cart__link" href="#">
-                    <img class="item-cart__img" width="46" height="46" src="images/catalog/raspberry.jpg"
-                      alt="Розовый шарик мороженого со вкусом малины.">
-                    <div class="item-cart__info">
-                      <h3 class="item-cart__title">Малинка</h3>
-                      <span class="item-cart__details">1 кг х 310 ₽</span>
-                    </div>
-                  </a>
-                  <b class="item-cart__price">310 ₽</b>
-                  <button class="item-cart__delete" type="button"
-                    aria-label="Удалить из корзины мороженое со вкусом малины."></button>
-                </li>
-                <li class="cart-popup__item item-cart">
-                  <a class="item-cart__link" href="#">
-                    <img class="item-cart__img" width="46" height="46" src="images/catalog/bubble-gum.jpg"
-                      alt="Светло-синий шарик мороженого со вкусом бабл-гам с разноцветной кондитерской посыпкой.">
-                    <div class="item-cart__info">
-                      <h3 class="item-cart__title">Бабл-гам</h3>
-                      <span class="item-cart__details">1,5 кг х 320 ₽</span>
-                    </div>
-                  </a>
-                  <b class="item-cart__price">480 ₽</b>
-                  <button class="item-cart__delete" type="button"
-                    aria-label="Удалить из корзины мороженое со вкусом бабл-гам"></button>
-                </li>
-              </ul>
-              <div class="cart-popup__row">
-                <a class="cart-popup__button button button--accent" href="#">Оформить заказ</a>
-                <strong class="cart-popup__final-price">Итого: 790 ₽</strong>
-              </div>
               <p class="cart-popup__empty-text">Ваша корзина пока пуста</p>
             </section>
           </li>
@@ -315,7 +283,7 @@
               <p class="product__text">Ванильный пломбир со сладкой посыпкой</p>
               <div class="product__info-row">
                 <b class="product__price">320 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину .">
+                <button class="product__button" type="button" aria-label="Добавить в корзину ванильный пломбир.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -463,11 +431,14 @@
       <p class="modal__like-title title">Мы обязательно ответим вам!</p>
       <form class="modal__form form-modal" action="#" method="post">
         <label class="visually-hidden" for="contact-name-input">Введите свое имя и фамилию</label>
-        <input class="form-modal__input form-field" id="contact-name-input" type="text" name="contact-name" placeholder="Имя и фамилия" required>
+        <input class="form-modal__input form-field" id="contact-name-input" type="text" name="contact-name"
+          placeholder="Имя и фамилия" required>
         <label class="visually-hidden" for="contact-email-input">Введите свой email</label>
-        <input class="form-modal__input form-field" id="contact-email-input" type="email" name="contact-email" placeholder="email@example.com" required>
+        <input class="form-modal__input form-field" id="contact-email-input" type="email" name="contact-email"
+          placeholder="email@example.com" required>
         <label class="visually-hidden" for="contact-message-textarea">Напишите свое сообщение</label>
-        <textarea class="form-modal__textarea form-field" id="contact-message-textarea" name="contact-message" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
+        <textarea class="form-modal__textarea form-field" id="contact-message-textarea" name="contact-message" cols="30"
+          rows="10" placeholder="В свободной форме" required></textarea>
         <button class="form-modal__button button button--accent" type="submit">Отправить</button>
       </form>
       <button class="modal__close-button" type="button" aria-lable="Закрыть модальное окно."></button>
