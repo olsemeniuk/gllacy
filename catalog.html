@@ -28,7 +28,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header page-header">
     <h1 class="visually-hidden">Магазин Глейси</h1>
     <div class="container">
       <div class="header__inner">
@@ -158,7 +158,7 @@
     <div class="container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Главная</a>
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Каталог</a>
@@ -175,7 +175,7 @@
             <legend class="filter__block-title filter__text">Сортировка:</legend>
             <p class="filter__select-wrapper">
               <label class="visually-hidden" for="catalog-select-field">Сортировать каталог товаров</label>
-              <select class="filter__select filter__text" id="catalog-select-field" name="catalog-select">
+              <select class="filter__select filter__text rounded-bg" id="catalog-select-field" name="catalog-select">
                 <option value="popular" selected>по популярности</option>
                 <option value="expensive">сначала дорогие</option>
                 <option value="cheap">сначала дешевые</option>
@@ -184,7 +184,7 @@
           </fieldset>
           <fieldset class="filter__block">
             <legend class="filter__block-title filter__text">Цена: 100 ₽ – 500 ₽</legend>
-            <div class="range-slider">
+            <div class="range-slider rounded-bg">
               <div class="range-slider__scale">
                 <div class="range-slider__bar" style="left: 32px; width: 75px;">
                   <div class="range-slider__toggle range-slider__toggle-min" tabindex="0"
@@ -197,60 +197,58 @@
           </fieldset>
           <fieldset class="filter__block">
             <legend class="filter__block-title filter__text">Жирность:</legend>
-            <div class="filter__block-inner">
-              <ul class="filter__controls-list">
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="fat-0-radio" type="radio" name="fat-content"
-                    value="0%">
-                  <label class="control__label control__label-radio" for="fat-0-radio">0%</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="fat-10-radio" type="radio" name="fat-content"
-                    value="less-10%" checked>
-                  <label class="control__label control__label-radio" for="fat-10-radio">до 10%</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="fat-less-30-radio" type="radio" name="fat-content"
-                    value="less-30%">
-                  <label class="control__label control__label-radio" for="fat-less-30-radio">до 30%</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="fat-more-30-radio" type="radio" name="fat-content"
-                    value="more-30%">
-                  <label class="control__label control__label-radio" for="fat-more-30-radio">выше 30%</label>
-                </li>
-              </ul>
-            </div>
+            <ul class="filter__controls-list rounded-bg">
+              <li class="control">
+                <input class="visually-hidden control__input" id="fat-0-radio" type="radio" name="fat-content"
+                  value="0%">
+                <label class="control__label control__label-radio filter__text" for="fat-0-radio">0%</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="fat-10-radio" type="radio" name="fat-content"
+                  value="less-10%" checked>
+                <label class="control__label control__label-radio filter__text" for="fat-10-radio">до 10%</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="fat-less-30-radio" type="radio" name="fat-content"
+                  value="less-30%">
+                <label class="control__label control__label-radio filter__text" for="fat-less-30-radio">до 30%</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="fat-more-30-radio" type="radio" name="fat-content"
+                  value="more-30%">
+                <label class="control__label control__label-radio filter__text" for="fat-more-30-radio">выше 30%</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filter__block">
             <legend class="filter__block-title filter__text">Наполнители:</legend>
-            <div class="filter__block-inner">
-              <ul class="filter__controls-list">
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="chockolate-checkbox" type="checkbox"
-                    name="chockolate" checked>
-                  <label class="control__label control__label-checkbox" for="chockolate-checkbox">шоколадные</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="sugar-sprinkles-checkbox" type="checkbox"
-                    name="sugar-sprinkles" checked>
-                  <label class="control__label control__label-checkbox" for="sugar-sprinkles-checkbox">сахарные
-                    посыпки</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="fruits-checkbox" type="checkbox" name="fruits">
-                  <label class="control__label control__label-checkbox" for="fruits-checkbox">фрукты</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="syrups-checkbox" type="checkbox" name="syrups">
-                  <label class="control__label control__label-checkbox" for="syrups-checkbox">сиропы</label>
-                </li>
-                <li class="filter__controls-item control">
-                  <input class="visually-hidden control__input" id="jams-checkbox" type="radio" name="jams">
-                  <label class="control__label control__label-checkbox" for="jams-checkbox">джемы</label>
-                </li>
-              </ul>
-            </div>
+            <ul class="filter__controls-list rounded-bg">
+              <li class="control">
+                <input class="visually-hidden control__input" id="chockolate-checkbox" type="checkbox" name="chockolate"
+                  checked>
+                <label class="control__label control__label-checkbox filter__text"
+                  for="chockolate-checkbox">шоколадные</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="sugar-sprinkles-checkbox" type="checkbox"
+                  name="sugar-sprinkles" checked>
+                <label class="control__label control__label-checkbox filter__text"
+                  for="sugar-sprinkles-checkbox">сахарные
+                  посыпки</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="fruits-checkbox" type="checkbox" name="fruits">
+                <label class="control__label control__label-checkbox filter__text" for="fruits-checkbox">фрукты</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="syrups-checkbox" type="checkbox" name="syrups">
+                <label class="control__label control__label-checkbox filter__text" for="syrups-checkbox">сиропы</label>
+              </li>
+              <li class="control">
+                <input class="visually-hidden control__input" id="jams-checkbox" type="radio" name="jams">
+                <label class="control__label control__label-checkbox filter__text" for="jams-checkbox">джемы</label>
+              </li>
+            </ul>
           </fieldset>
           <button class="filter__button" type="submit"
             aria-label="Показать список товаров с учетом фильтра.">Применить</button>
@@ -510,14 +508,14 @@
           </li>
         </ul>
         <div class="catalog__row">
-          <button class="catalog__button button button--white" type="button">Показать ещё</button>
+          <button class="button button--white" type="button">Показать ещё</button>
           <ul class="pagination" aria-label="Переключение страниц каталога товаров.">
             <li class="pagination__item">
               <a class="pagination__link pagination__link-prev pagination__link--disabled" href="#"
                 aria-label="Предыдущая страница."></a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--current" href="#" aria-label="Первая страница.">1</a>
+              <a class="pagination__link pagination__link--current" aria-label="Первая страница.">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#" aria-label="Вторая страница.">2</a>
@@ -542,35 +540,35 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__socials-wrapper">
-          <ul class="footer__socials socials" aria-label="Ссылки на социальные сети.">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vkontakte" href="#" aria-label="Вконтакте."></a>
+        <ul class="footer__socials socials" aria-label="Ссылки на социальные сети.">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="#" aria-label="Вконтакте."></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="#" aria-label="Фейсбук."></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram" href="#" aria-label="Инстаграм."></a>
+          </li>
+        </ul>
+        <div class="footer__info-wrapper">
+          <ul class="footer__info">
+            <li>
+              <a class="footer__info-link footer__info-link--accent" href="#">Для поставщиков</a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="#" aria-label="Фейсбук."></a>
+            <li>
+              <a class="footer__info-link" href="#">Наши документы</a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="#" aria-label="Инстаграм."></a>
+            <li>
+              <a class="footer__info-link" href="#">О производстве</a>
+            </li>
+            <li>
+              <a class="footer__info-link" href="#">Экологические стандарты</a>
             </li>
           </ul>
         </div>
-        <ul class="footer__info">
-          <li>
-            <a class="footer__info-link footer__info-link--accent" href="#">Для поставщиков</a>
-          </li>
-          <li>
-            <a class="footer__info-link" href="#">Наши документы</a>
-          </li>
-          <li>
-            <a class="footer__info-link" href="#">О производстве</a>
-          </li>
-          <li>
-            <a class="footer__info-link" href="#">Экологические стандарты</a>
-          </li>
-        </ul>
         <div class="footer__author-wrapper">
-          <div class="footer__author author">
+          <div class="author">
             <a class="author__logo" href="#">
               <img width="93" height="27" src="images/html-academy-logo.svg" alt="Логотип HTML Академии.">
             </a>

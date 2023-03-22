@@ -169,11 +169,3 @@ window.addEventListener('keydown', e => {
 closeModal(overlay);
 closeModal(modalCloseBtn);
 
-
-// footer alignment
-const footerSocials = document.querySelector('.footer__socials-wrapper'),
-      footerAuthorWrapper = document.querySelector('.footer__author-wrapper'),
-      footerInfoList = document.querySelector('.footer__info');
-
-footerSocials.style.width = `calc(50% - ${footerInfoList.offsetWidth / 2}px)`;
-footerAuthorWrapper.style.width = `calc(50% - ${footerInfoList.offsetWidth / 2}px)`;
