@@ -173,7 +173,8 @@
         <div class="slider__bottom-row">
           <ul class="slider__dots" aria-label="Кнопки переключения слайдов.">
             <li class="slider__dots-item">
-              <button class="slider__dots-button slider__dots-button--active" type="button" aria-label="Показать первый слайд."></button>
+              <button class="slider__dots-button slider__dots-button--active" type="button"
+                aria-label="Показать первый слайд."></button>
             </li>
             <li class="slider__dots-item">
               <button class="slider__dots-button" type="button" aria-label="Показать второй слайд."></button>
@@ -290,7 +291,8 @@
               <p class="product__text">Ванильный пломбир со сладкой посыпкой</p>
               <div class="product__info-row">
                 <b class="product__price">320 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину ванильный пломбир." disabled>
+                <button class="product__button" type="button" aria-label="Добавить в корзину ванильный пломбир."
+                  disabled>
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -311,10 +313,10 @@
           <ul class="about__list">
             <li class="about__item about__item--production">Всё наше мороженое изготавливается на собственном
               производстве с использованием современного оборудования и проверенных временем технологий.</li>
-            <li class="about__item about__item--quality">Для приготовления мороженого используются сливки и молоко
-              высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</li>
             <li class="about__item about__item--ingredients">Закупка ингредиентов производится только у проверенных
               фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</li>
+            <li class="about__item about__item--quality">Для приготовления мороженого используются сливки и молоко
+              высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</li>
             <li class="about__item about__item--temperature">Доставка нашего мороженого осуществляется в специальном
               термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</li>
           </ul>
@@ -347,7 +349,7 @@
           <p class="delivery__text">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите
             доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         </div>
-        <form class="delivery__form form-delivery" action="#" method="post">
+        <form class="form-delivery" action="#" method="post">
           <p class="form-delivery__text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
           </p>
           <div class="form-delivery__inner">
@@ -365,8 +367,8 @@
             <p class="form-delivery__block form-delivery__block--big">
               <label class="form-delivery__label" for="delivery-address-input">Адрес <span class="form-delivery__info"
                   aria-label="Введите название улицы, дома и квартиры"></span></label>
-              <input class="form-field" id="delivery-address-input" type="text"
-                name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
+              <input class="form-field" id="delivery-address-input" type="text" name="delivery-address"
+                placeholder="ул. Большая Конюшенная, 19/8">
             </p>
             <button class="form-delivery__button button button--accent" type="submit">Отправить</button>
           </div>
@@ -374,13 +376,13 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <address class="contacts__address address">
+        <address class="address">
           <ul class="address__list">
-            <li class="address__list-item">
-              <p class="address__text">Адрес главного офиса и офлайн-магазина:</p>
-              <b class="address__accent-text">наб. реки Карповки, 5 лит П, Санкт-Петербург</b>
+            <li>
+              <p class="address__text">Адрес главного офиса <br> и офлайн-магазина:</p>
+              <b class="address__accent-text">наб. реки Карповки, <br> 5 лит П, Санкт-Петербург</b>
             </li>
-            <li class="address__list-item">
+            <li>
               <p class="address__text">Для заказов по телефону:</p>
               <a class="address__tel address__accent-text" href="tel:+78128121212"
                 aria-label="Телефон для заказов: +7 (812) 812-12-12">+7 (812) 812-12-12</a>
