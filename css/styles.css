@@ -1545,7 +1545,7 @@ textarea.form-field {
   list-style-type: none;
 }
 
-.address__list-item + .address__list-item {
+.address__list-item+.address__list-item {
   margin-top: 24px;
 }
 
@@ -1588,6 +1588,86 @@ textarea.form-field {
 }
 
 
+/* modal */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(45, 52, 64, 0.3);
+}
+
+.overlay--active {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  width: 570px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 64px;
+  background-color: var(--extra-light);
+  border-radius: 8px;
+  box-shadow: var(--big-shadow);
+}
+
+.modal--active {
+  animation: appearTopBig 0.4s;
+}
+
+.modal__like-title {
+  margin-bottom: 32px;
+}
+
+.form-modal__input {
+  margin-bottom: 16px;
+}
+
+.form-modal__textarea {
+  margin-bottom: 32px;
+}
+
+.form-modal__button {
+  display: block;
+  margin-left: auto;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../images/icons/cross-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+}
+
+.modal__close-button:focus {
+  outline: 2px solid var(--extra-dark);
+}
+
+.modal__close-button:hover {
+  opacity: 0.5;
+  outline: none;
+}
+
+.modal__close-button:active {
+  opacity: 0.3;
+}
+
+
 /*====================
     ANIMATIONS
   ====================*/
@@ -1595,6 +1675,18 @@ textarea.form-field {
   from {
     opacity: 0;
     transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appearTopBig {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
   }
 
   to {

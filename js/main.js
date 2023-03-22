@@ -105,3 +105,42 @@ if (activeSlide.classList.contains('item-slider--strawberry')) {
 } else if (activeSlide.classList.contains('item-slider--marshmallow')) {
   bodyTag.classList.add('yellow-bg');
 };
+
+
+// modal window
+const modal = document.querySelector('.modal'),
+      overlay = document.querySelector('.overlay'),
+      modalOpen = document.querySelectorAll('.open-modal'),
+      modalCloseBtn = modal.querySelector('.modal__close-button');
+
+modalOpen.forEach(open => {
+  open.addEventListener('click', () => {
+    if(!overlay.classList.contains('overlay--active')) {
+      overlay.classList.add('overlay--active');
+      modal.classList.add('modal--active');
+    };
+  });
+});
+
+const closeModal = (modalCloser) => {
+  modalCloser.addEventListener('click', () => {
+    if(overlay.classList.contains('overlay--active')) {
+      overlay.classList.remove('overlay--active');
+      modal.classList.remove('modal--active');
+    };
+  });
+};
+
+modal.addEventListener('click', e => {
+  e.stopPropagation();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.code === 'Escape') {
+    overlay.classList.remove('overlay--active');
+    modal.classList.remove('modal--active');
+  };
+});
+
+closeModal(overlay);
+closeModal(modalCloseBtn);
