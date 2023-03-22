@@ -1259,6 +1259,69 @@ textarea.form-field {
   transform: translate(-50%, -50%);
 }
 
+/* about */
+.about {
+  padding: 24px;
+  background-image: url("../images/backgrounds/waffle-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.about__inner {
+  padding: 56px 40px;
+  background-color: var(--extra-light);
+  border-radius: 16px;
+}
+
+.about__like-title {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about__item {
+  position: relative;
+  padding-left: 64px;
+}
+
+.about__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__item--production::before {
+  background-image: url("../images/icons/ice-cream-icon.svg");
+}
+
+.about__item--quality::before {
+  background-image: url("../images/icons/leaf-icon.svg");
+}
+
+.about__item--ingredients::before {
+  background-image: url("../images/icons/cow-icon.svg");
+}
+
+.about__item--temperature::before {
+  background-image: url("../images/icons/thermometer-icon.svg");
+}
+
 
 /*====================
     ANIMATIONS
