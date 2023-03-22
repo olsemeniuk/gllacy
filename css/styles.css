@@ -1322,6 +1322,82 @@ textarea.form-field {
   background-image: url("../images/icons/thermometer-icon.svg");
 }
 
+/* subscribe */
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subscribe__blog {
+  position: relative;
+  width: calc(50% - 15px);
+  min-height: 220px;
+  margin-right: 30px;
+  padding: 32px;
+  background-color: var(--white);
+  background-image: url("../images/backgrounds/sherbet-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.subscribe__blog-notification {
+  max-width: 300px;
+  margin: 0 0 12px;
+  line-height: 20px;
+}
+
+.subscribe__blog-title {
+  max-width: 300px;
+}
+
+.subscribe__blog-link {
+  text-decoration: none;
+  color: var(--extra-dark);
+}
+
+.subscribe__blog-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.subscribe__form {
+  width: calc(50% - 15px);
+  padding: 6px;
+  background-image: url("../images/backgrounds/subscribe-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.subscribe__form-inner {
+  height: 100%;
+  padding: 26px;
+  background-color: var(--extra-light);
+  border-radius: 16px;
+}
+
+.subscribe__form-text {
+  margin: 0 0 42px;
+}
+
+.subscribe__form-row {
+  display: flex;
+  margin: 0;
+}
+
+.subscribe__input {
+  margin-right: 22px;
+}
+
+.subscribe__button {}
+
 
 /*====================
     ANIMATIONS
