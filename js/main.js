@@ -1,14 +1,15 @@
+// header popups
 const searchPopup = document.querySelector('.search-popup'),
-  searchInput = searchPopup.querySelector('.search-popup__input'),
-  searchResetBtn = searchPopup.querySelector('.search-popup__reset-button'),
-  openSearchPopup = document.querySelector('.open-search'),
-  passwordInputWrapper = document.querySelector('.login-form__password-block'),
-  loginPasswordInput = document.getElementById('login-password-input'),
-  loginEmailInput = document.getElementById('login-email-input'),
-  openLoginPopup = document.querySelector('.user-nav__button-login'),
-  loginPopup = document.querySelector('.login-popup'),
-  cartPopup = document.querySelector('.cart-popup'),
-  openCartPopup = document.querySelector('.cart-button');
+      searchInput = searchPopup.querySelector('.search-popup__input'),
+      searchResetBtn = searchPopup.querySelector('.search-popup__reset-button'),
+      openSearchPopup = document.querySelector('.open-search'),
+      passwordInputWrapper = document.querySelector('.login-form__password-block'),
+      loginPasswordInput = document.getElementById('login-password-input'),
+      loginEmailInput = document.getElementById('login-email-input'),
+      openLoginPopup = document.querySelector('.user-nav__button-login'),
+      loginPopup = document.querySelector('.login-popup'),
+      cartPopup = document.querySelector('.cart-popup'),
+      openCartPopup = document.querySelector('.cart-button');
 
 // function that openes popup
 const openPopup = (popupOpener, popup, focusedElement) => {
@@ -87,3 +88,20 @@ loginPasswordInput.addEventListener('input', () => {
     passwordInputWrapper.classList.add('login-form__password-block--active');
   };
 });
+
+// slider
+const sliderList = document.querySelector('.slider__list'),
+      activeSlide = sliderList.querySelector('.item-slider--active'),
+      bodyTag = document.querySelector('body');
+
+bodyTag.classList.remove('pink-bg');
+bodyTag.classList.remove('blue-bg');
+bodyTag.classList.remove('yellow-bg');
+
+if (activeSlide.classList.contains('item-slider--strawberry')) {
+  bodyTag.classList.add('pink-bg');
+} else if (activeSlide.classList.contains('item-slider--banana')) {
+  bodyTag.classList.add('blue-bg');
+} else if (activeSlide.classList.contains('item-slider--marshmallow')) {
+  bodyTag.classList.add('yellow-bg');
+};
