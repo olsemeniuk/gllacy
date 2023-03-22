@@ -1070,7 +1070,7 @@ textarea.form-field {
   height: 24px;
   background-color: rgba(252, 252, 252, 0.2);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 102%;
   background-position: center;
   border-radius: 50%;
   outline: 2px solid rgba(252, 252, 252, 0.2);
@@ -1667,6 +1667,133 @@ textarea.form-field {
   opacity: 0.3;
 }
 
+/* footer */
+.footer {
+  padding: 48px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__info {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0 0 0 24px;
+  list-style-type: none;
+}
+
+.footer__info-link {
+  max-width: 190px;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--extra-dark);
+  border-radius: 5px;
+}
+
+.footer__info-link--accent {
+  position: relative;
+  font-weight: 700;
+}
+
+.footer__info-link--accent::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/heart-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+.footer__info-link:focus {
+  outline: 2px solid var(--extra-dark);
+  outline-offset: 5px;
+}
+
+.footer__info-link:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-position: under;
+  text-underline-offset: 2px;
+  outline: none;
+}
+
+.footer__info-link:active {
+  opacity: 0.3;
+}
+
+.footer__author-wrapper {
+  display: flex;
+}
+
+.footer__author {
+  margin-left: auto;
+}
+
+.author__logo {
+  margin-bottom: 14px;
+  line-height: 0;
+  border-radius: 5px;
+}
+
+.author__logo:focus {
+  outline: 2px solid var(--extra-dark);
+  outline-offset: 5px;
+}
+
+.author__logo:hover {
+  opacity: 0.5;
+  outline: none;
+}
+
+.author__logo:active {
+  opacity: 0.3;
+}
+
+.author__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--extra-dark);
+}
+
+.author__text-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-color: rgba(45, 52, 64, 0.5);
+  text-underline-position: under;
+  color: inherit;
+  border-radius: 5px;
+}
+
+.author__text-link:focus {
+  text-decoration: none;
+  outline: 2px solid var(--extra-dark);
+}
+
+.author__text-link:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--extra-dark);
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+  text-underline-offset: 3px;
+  outline: none;
+}
+
+.author__text-link:active {
+  opacity: 0.3;
+}
 
 /*====================
     ANIMATIONS

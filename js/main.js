@@ -1,15 +1,15 @@
 // header popups
 const searchPopup = document.querySelector('.search-popup'),
-      searchInput = searchPopup.querySelector('.search-popup__input'),
-      searchResetBtn = searchPopup.querySelector('.search-popup__reset-button'),
-      openSearchPopup = document.querySelector('.open-search'),
-      passwordInputWrapper = document.querySelector('.login-form__password-block'),
-      loginPasswordInput = document.getElementById('login-password-input'),
-      loginEmailInput = document.getElementById('login-email-input'),
-      openLoginPopup = document.querySelector('.user-nav__button-login'),
-      loginPopup = document.querySelector('.login-popup'),
-      cartPopup = document.querySelector('.cart-popup'),
-      openCartPopup = document.querySelector('.cart-button');
+  searchInput = searchPopup.querySelector('.search-popup__input'),
+  searchResetBtn = searchPopup.querySelector('.search-popup__reset-button'),
+  openSearchPopup = document.querySelector('.open-search'),
+  passwordInputWrapper = document.querySelector('.login-form__password-block'),
+  loginPasswordInput = document.getElementById('login-password-input'),
+  loginEmailInput = document.getElementById('login-email-input'),
+  openLoginPopup = document.querySelector('.user-nav__button-login'),
+  loginPopup = document.querySelector('.login-popup'),
+  cartPopup = document.querySelector('.cart-popup'),
+  openCartPopup = document.querySelector('.cart-button');
 
 // function that openes popup
 const openPopup = (popupOpener, popup, focusedElement) => {
@@ -91,31 +91,55 @@ loginPasswordInput.addEventListener('input', () => {
 
 // slider
 const sliderList = document.querySelector('.slider__list'),
-      activeSlide = sliderList.querySelector('.item-slider--active'),
-      bodyTag = document.querySelector('body');
+  sliderListSlide = sliderList.querySelectorAll('.item-slider'),
+  activeSlide = sliderList.querySelector('.item-slider--active'),
+  strawberrySlide = sliderList.querySelector('.item-slider--strawberry'),
+  bananaSlide = sliderList.querySelector('.item-slider--banana'),
+  marshmallowSlide = sliderList.querySelector('.item-slider--marshmallow'),
+  bodyTag = document.querySelector('body'),
+  sliderDots = document.querySelectorAll('.slider__dots-button');
 
-bodyTag.classList.remove('pink-bg');
-bodyTag.classList.remove('blue-bg');
-bodyTag.classList.remove('yellow-bg');
-
-if (activeSlide.classList.contains('item-slider--strawberry')) {
-  bodyTag.classList.add('pink-bg');
-} else if (activeSlide.classList.contains('item-slider--banana')) {
-  bodyTag.classList.add('blue-bg');
-} else if (activeSlide.classList.contains('item-slider--marshmallow')) {
-  bodyTag.classList.add('yellow-bg');
-};
+sliderDots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    for (let i = 0; i < sliderDots.length; i++) {
+      sliderDots[i].classList.remove('slider__dots-button--active');
+    };
+    dot.classList.add('slider__dots-button--active');
+    bodyTag.classList.remove('pink-bg');
+    bodyTag.classList.remove('blue-bg');
+    bodyTag.classList.remove('yellow-bg');
+    sliderListSlide.forEach(slide => {
+      slide.classList.remove('item-slider--active');
+    });
+    if (i === 0) {
+      strawberrySlide.classList.add('item-slider--active');
+      bodyTag.classList.add('pink-bg');
+      bodyTag.classList.remove('blue-bg');
+      bodyTag.classList.remove('yellow-bg');
+    } else if (i === 1) {
+      bananaSlide.classList.add('item-slider--active');
+      bodyTag.classList.add('blue-bg');
+      bodyTag.classList.remove('pink-bg');
+      bodyTag.classList.remove('yellow-bg');
+    } else if (i === 2) {
+      marshmallowSlide.classList.add('item-slider--active');
+      bodyTag.classList.add('yellow-bg');
+      bodyTag.classList.remove('pink-bg');
+      bodyTag.classList.remove('blue-bg');
+    };
+  });
+});
 
 
 // modal window
 const modal = document.querySelector('.modal'),
-      overlay = document.querySelector('.overlay'),
-      modalOpen = document.querySelectorAll('.open-modal'),
-      modalCloseBtn = modal.querySelector('.modal__close-button');
+  overlay = document.querySelector('.overlay'),
+  modalOpen = document.querySelectorAll('.open-modal'),
+  modalCloseBtn = modal.querySelector('.modal__close-button');
 
 modalOpen.forEach(open => {
   open.addEventListener('click', () => {
-    if(!overlay.classList.contains('overlay--active')) {
+    if (!overlay.classList.contains('overlay--active')) {
       overlay.classList.add('overlay--active');
       modal.classList.add('modal--active');
     };
@@ -124,7 +148,7 @@ modalOpen.forEach(open => {
 
 const closeModal = (modalCloser) => {
   modalCloser.addEventListener('click', () => {
-    if(overlay.classList.contains('overlay--active')) {
+    if (overlay.classList.contains('overlay--active')) {
       overlay.classList.remove('overlay--active');
       modal.classList.remove('modal--active');
     };
@@ -144,3 +168,12 @@ window.addEventListener('keydown', e => {
 
 closeModal(overlay);
 closeModal(modalCloseBtn);
+
+
+// footer alignment
+const footerSocials = document.querySelector('.footer__socials-wrapper'),
+      footerAuthorWrapper = document.querySelector('.footer__author-wrapper'),
+      footerInfoList = document.querySelector('.footer__info');
+
+footerSocials.style.width = `calc(50% - ${footerInfoList.offsetWidth / 2}px)`;
+footerAuthorWrapper.style.width = `calc(50% - ${footerInfoList.offsetWidth / 2}px)`;
