@@ -135,13 +135,15 @@ sliderDots.forEach((dot, i) => {
 const modal = document.querySelector('.modal'),
   overlay = document.querySelector('.overlay'),
   modalOpen = document.querySelectorAll('.open-modal'),
-  modalCloseBtn = modal.querySelector('.modal__close-button');
+  modalCloseBtn = modal.querySelector('.modal__close-button'),
+  modalNameInput = modal.querySelector('#contact-name-input');
 
 modalOpen.forEach(open => {
   open.addEventListener('click', () => {
     if (!overlay.classList.contains('overlay--active')) {
       overlay.classList.add('overlay--active');
       modal.classList.add('modal--active');
+      modalNameInput.focus();
     };
   });
 });
@@ -151,6 +153,7 @@ const closeModal = (modalCloser) => {
     if (overlay.classList.contains('overlay--active')) {
       overlay.classList.remove('overlay--active');
       modal.classList.remove('modal--active');
+      // modalNameInput.blur();
     };
   });
 };

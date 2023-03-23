@@ -39,7 +39,7 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="nav__list">
             <li class="dropdown-container">
-              <a class="nav-link">Каталог</a>
+              <a class="nav-link nav-link--active" href="#" aria-haspopup="true">Каталог</a>
               <section class="dropdown">
                 <h3 class="dropdown__title">Новинки</h3>
                 <ul class="dropdown__list">
@@ -68,7 +68,7 @@
         </nav>
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="header__tel" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="header__tel" href="tel:+78005558628" aria-label="Телефон магазина: +7 800 555-86-28">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item">
             <button class="open-search" type="button" aria-label="Открыть форму поиска"></button>
@@ -118,7 +118,7 @@
               </h2>
               <ul class="cart-popup__list">
                 <li class="cart-popup__item item-cart">
-                  <a class="item-cart__link" href="#">
+                  <a class="item-cart__link" href="#" aria-label="Мороженое малинка. 310 рублей за килограмм.">
                     <img class="item-cart__img" width="46" height="46" src="images/catalog/raspberry.jpg"
                       alt="Розовый шарик мороженого со вкусом малины.">
                     <div>
@@ -128,10 +128,10 @@
                   </a>
                   <b class="item-cart__price">310 ₽</b>
                   <button class="item-cart__delete" type="button"
-                    aria-label="Удалить из корзины мороженое со вкусом малины."></button>
+                    aria-label="Удалить из корзины мороженое малинка."></button>
                 </li>
                 <li class="cart-popup__item item-cart">
-                  <a class="item-cart__link" href="#">
+                  <a class="item-cart__link" href="#" aria-label="Мороженое бабл-гам. 320 рублей за полтора килограмма.">
                     <img class="item-cart__img" width="46" height="46" src="images/catalog/bubble-gum.jpg"
                       alt="Светло-синий шарик мороженого со вкусом бабл-гам с разноцветной кондитерской посыпкой.">
                     <div>
@@ -141,7 +141,7 @@
                   </a>
                   <b class="item-cart__price">480 ₽</b>
                   <button class="item-cart__delete" type="button"
-                    aria-label="Удалить из корзины мороженое со вкусом бабл-гам"></button>
+                    aria-label="Удалить из корзины мороженое бабл-гам"></button>
                 </li>
               </ul>
               <div class="cart-popup__row">
@@ -264,7 +264,7 @@
               <p class="product__text">Сливочное мороженое с малиновым джемом</p>
               <div class="product__info-row">
                 <b class="product__price">310 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину малиновое мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину малиновое мороженое по 310 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -285,7 +285,7 @@
               <p class="product__text">Фисташковый пломбир с кусочками шоколада</p>
               <div class="product__info-row">
                 <b class="product__price">340 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину фисташковый пломбир.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину фисташковый пломбир по 340 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -306,7 +306,7 @@
               <p class="product__text">Крем-брюле с черничным джемом</p>
               <div class="product__info-row">
                 <b class="product__price">330 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину черничное мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину черничное мороженое по 330 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -327,7 +327,7 @@
               <p class="product__text">Ванильный пломбир со сладкой посыпкой</p>
               <div class="product__info-row">
                 <b class="product__price">320 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину ванильный пломбир.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину ванильный пломбир по 320 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -348,7 +348,7 @@
               <p class="product__text">Сливочное мороженое с ежевичным джемом</p>
               <div class="product__info-row">
                 <b class="product__price">330 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину ежевичное мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину ежевичное мороженое по 330 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -369,7 +369,7 @@
               <p class="product__text">Сливочный пломбир с банановым вкусом</p>
               <div class="product__info-row">
                 <b class="product__price">340 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину банановый пломбир.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину банановый пломбир по 340 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -390,7 +390,7 @@
               <p class="product__text">Классический шоколадный пломбир</p>
               <div class="product__info-row">
                 <b class="product__price">270 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину шоколадное мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину шоколадное мороженое по 270 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -411,7 +411,7 @@
               <p class="product__text">Сливочный пломбир с клубничным вкусом</p>
               <div class="product__info-row">
                 <b class="product__price">300 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину клубничный пломбир.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину клубничный пломбир по 300 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -432,7 +432,7 @@
               <p class="product__text">Освежающий лимонный сорбет</p>
               <div class="product__info-row">
                 <b class="product__price">310 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину лимонное мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину лимонное мороженое по 310 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -453,7 +453,7 @@
               <p class="product__text">Сливочный пломбир с ментоловым сиропом</p>
               <div class="product__info-row">
                 <b class="product__price">320 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину ментоловое мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину ментоловое мороженое по 320 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -474,7 +474,7 @@
               <p class="product__text">Фисташковый пломбир с шоколадным сиропом</p>
               <div class="product__info-row">
                 <b class="product__price">360 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину фисташковое мороженое.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину фисташковое мороженое по 360 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -495,7 +495,7 @@
               <p class="product__text">Классическое крем-брюле </p>
               <div class="product__info-row">
                 <b class="product__price">280 ₽/кг</b>
-                <button class="product__button" type="button" aria-label="Добавить в корзину мороженое крем-брюле.">
+                <button class="product__button" type="button" aria-label="Добавить в корзину мороженое крем-брюле по 280 рублей за килограмм.">
                   <svg class="product__button-icon" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none" viewBox="0 0 17 16">
                     <path fill="#fcfcfc" fill-rule="evenodd"
@@ -508,7 +508,7 @@
           </li>
         </ul>
         <div class="catalog__row">
-          <button class="button button--white" type="button">Показать ещё</button>
+          <button class="catalog__button button button--white" type="button">Показать ещё</button>
           <ul class="pagination" aria-label="Переключение страниц каталога товаров.">
             <li class="pagination__item">
               <a class="pagination__link pagination__link-prev pagination__link--disabled" href="#"

@@ -39,7 +39,7 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="nav__list">
             <li class="dropdown-container">
-              <a class="nav-link" href="catalog.html">Каталог</a>
+              <a class="nav-link" href="catalog.html" aria-haspopup="true">Каталог</a>
               <section class="dropdown">
                 <h3 class="dropdown__title">Новинки</h3>
                 <ul class="dropdown__list">
@@ -68,7 +68,7 @@
         </nav>
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="header__tel" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="header__tel" href="tel:+78005558628" aria-label="Телефон магазина: +7 800 555-86-28">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item">
             <button class="open-search" type="button" aria-label="Открыть форму поиска"></button>
@@ -183,7 +183,7 @@
               <button class="slider__dots-button" type="button" aria-label="Показать третий слайд."></button>
             </li>
           </ul>
-          <ul class="socials" aria-label="Ссылки на социальные сети.">
+          <ul class="header__socials socials" aria-label="Ссылки на социальные сети.">
             <li class="socials__item">
               <a class="socials__link socials__link--vkontakte" href="#" aria-label="Вконтакте."></a>
             </li>
@@ -204,13 +204,13 @@
             <h3 class="item-presents__title small-title">Малинка даром!</h3>
             <p class="item-presents__text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
               малинового варенья бесплатно.</p>
-            <a class="button button--white" href="#">Хочу подарок</a>
+            <a class="item-presents__button button button--white" href="#" aria-label="Перейти в каталог товаров">Хочу подарок</a>
           </li>
           <li class="item-presents item-presents--marshmallow">
             <h3 class="item-presents__title small-title">Маршмеллоу даром!</h3>
             <p class="item-presents__text">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок
               совершенно бесплатно.</p>
-            <a class="button button--white" href="#">Хочу подарок</a>
+            <a class="item-presents__button button button--white" href="#" aria-label="Перейти в каталог товаров">Хочу подарок</a>
           </li>
         </ul>
       </section>
@@ -338,7 +338,7 @@
               <label class="visually-hidden" for="subscribe-email-input">Введите ваш email</label>
               <input class="subscribe__input form-field" id="subscribe-email-input" type="email" name="subscribe-email"
                 placeholder="email@example.com" required>
-              <button class="button button--accent" type="submit">Отправить</button>
+              <button class="subscribe__button button button--accent" type="submit">Отправить</button>
             </p>
           </div>
         </form>
@@ -355,7 +355,7 @@
           <div class="form-delivery__inner">
             <p class="form-delivery__block">
               <label class="form-delivery__label" for="delivery-date-input">Дата <span class="form-delivery__info"
-                  aria-label="Укажите желаемую дату"></span></label>
+                  aria-label="Укажите желаемую дату" tabindex="0"></span></label>
               <input class="form-field" id="delivery-date-input" type="text" name="delivery-date"
                 placeholder="01.04.2020">
             </p>
@@ -366,7 +366,7 @@
             </p>
             <p class="form-delivery__block form-delivery__block--big">
               <label class="form-delivery__label" for="delivery-address-input">Адрес <span class="form-delivery__info"
-                  aria-label="Введите название улицы, дома и квартиры"></span></label>
+                  aria-label="Введите название улицы, дома и квартиры" tabindex="0"></span></label>
               <input class="form-field" id="delivery-address-input" type="text" name="delivery-address"
                 placeholder="ул. Большая Конюшенная, 19/8">
             </p>
@@ -453,7 +453,7 @@
           rows="10" placeholder="В свободной форме" required></textarea>
         <button class="form-modal__button button button--accent" type="submit">Отправить</button>
       </form>
-      <button class="modal__close-button" type="button" aria-lable="Закрыть модальное окно."></button>
+      <button class="modal__close-button" type="button" aria-label="Закрыть модальное окно."></button>
     </section>
   </div>
   <!-- scripts and js libs -->
